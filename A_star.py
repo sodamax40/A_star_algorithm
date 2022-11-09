@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 from collections import OrderedDict
 
+# add some comment
+
 data = pd.read_csv(
     r'/Users/youdengsong/Desktop/master_course/Artificial_intelligent/assign_1/100_nodes.csv')
 df = pd.DataFrame(data, columns=['x', 'y'])
@@ -71,7 +73,7 @@ def algorithm(start, goal, weight):
             path.append(n['state'])
             parent_num = n['parent']
 
-            while(parent_num != start):
+            while (parent_num != start):
 
                 path.append(parent_num)
                 node_name = 'node' + str(parent_num)
