@@ -12,7 +12,7 @@ df = pd.DataFrame(data, columns=['x', 'y'])
 def heuristic_cost(state, goal):
     x_sub = abs(df.iat[state, 0] - df.iat[goal, 0])
     y_sub = abs(df.iat[state, 1] - df.iat[goal, 1])
-    return 1 / 2 * (x_sub + y_sub)
+    return (x_sub + y_sub)
 
 
 def search_best_node(frontier, weight, goal):
